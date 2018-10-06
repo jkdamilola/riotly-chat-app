@@ -1,3 +1,6 @@
 [submodule "riotly-chat-client"]
 	path = riotly-chat-client
 	url = https://github.com/jkdamilola/riotly-chat-client
+[submodule "riotly-chat-server"]
+	path = riotly-chat-server
+	url = https://github.com/jkdamilola/riotly-chat-server
