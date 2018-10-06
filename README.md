@@ -22,10 +22,10 @@ yarn install-all
 Start server:
 ```sh
 # Start server
-yarn server start
+yarn riotly-chat-server start
 
 # Start client app
-yarn client start
+yarn riotly-chat-client start
 ```
 
 ## Docker
@@ -41,14 +41,14 @@ docker-compose up --build --abort-on-container-exit
 # To use this option you need to make sure mongodb is listening on port 27017
 
 # Build riotly server docker
-cd ./server
+cd ./riotly-chat-server
 docker build -t riotly-server .
 
 # Run riotly server docker
 docker run -p 8000:8000 riotly-server
 
 # Build riotly client docker
-cd ./client
+cd ./riotly-chat-client
 docker build -t riotly-client .
 
 # Run riotly client docker

@@ -2,14 +2,14 @@ version: '2.1'
 services:
   riotly-server:
     container_name: riotly-server
-    build: ./server/
+    build: ./riotly-chat-server/
     command: npm start
     volumes:
-      - './server:/usr/src/app'
-      - './server/package.json:/usr/src/package.json'
+      - './riotly-chat-server:/usr/src/app'
+      - './riotly-chat-server/package.json:/usr/src/package.json'
     ports:
       - "8000:8000"
-    env_file: ./server/.env
+    env_file: ./riotly-chat-server/.env
     environment:
       - NODE_ENV=development
     links:
@@ -20,9 +20,9 @@ services:
       - "27017:27017"
   riotly-client:
     container_name: riotly-client
-    build: ./client/
+    build: ./riotly-chat-client/
     volumes:
-      - './client:/usr/src/app'
+      - './riotly-chat-client:/usr/src/app'
       - '/usr/src/app/node_modules'
     ports:
       - '3000:3000' # expose ports - HOST:CONTAINER
